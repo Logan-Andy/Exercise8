@@ -1,33 +1,14 @@
+import java.util.*;
 class Both {
-    private ContactInfo ci;
-    private BusinessInfo bi;
+    static ArrayList<ContactInfo> listOfContacts = new ArrayList<>();
 
-    public Both(ContactInfo ci, BusinessInfo bi) {
-        this.ci = ci;
-        this.bi = bi;
+    static void addContact(ContactInfo a) {
+        listOfContacts.add(a);
+
     }
-
-    public ContactInfo getCi() {
-        return ci;
-    }
-
-    public void setCi(ContactInfo ci) {
-        this.ci = ci;
-    }
-
-    public BusinessInfo getBi() {
-        return bi;
-    }
-
-    public void setBi(BusinessInfo bi) {
-        this.bi = bi;
-    }
-
-    @Override
-    public String toString() {
-        return "Both{" +
-                "ci=" + ci +
-                ", bi=" + bi +
-                '}';
+    static void displayContacts(){
+        for(ContactInfo b : listOfContacts){
+            b.display();
+        }
     }
 }
